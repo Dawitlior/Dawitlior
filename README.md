@@ -1,7 +1,7 @@
 <h1 align="center">Hello 👋, I'm Dawit Lior</h1>
 <h3 align="center">Motivated Full stack developer</h3>
 <img align="right" width="300" alt="GIF" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" />
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=SolomonAvraham&label=Profile%20views&color=0e75b6&style=flat" alt="solomon" /></p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=Dawitlior&label=Profile%20views&color=0e75b6&style=flat" alt="solomon" /></p>
 
 
 
