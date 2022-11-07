@@ -9,7 +9,7 @@
 
 - 🌱  i'm currently learning **Node.js**
 
-- 📫  How to reach me **dawitlior777@gmail.com**
+- 📫  How to reach me **Liordawit@walla.co.il**
  
 
 
