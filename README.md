@@ -42,9 +42,4 @@
 <br/>
 
 </p>
-
- ## ⚡ Views and Followers
-<a href="https://github.com/Meghna-DAS/github-profile-views-counter">
-    <img src="https://komarev.com/ghpvc/?username=Dawitlior">
-</a>
-<a href="https://github.com/Dawitlior?tab=followers"><img src="https://img.shields.io/github/followers/Dawitlior?label=Followers&style=social" alt="GitHub Badge"></a> 
+ 
