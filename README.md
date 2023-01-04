@@ -35,8 +35,7 @@
 
 <br/>
 <br/>
-
-<a href="https://github.com/Dawitlior/github-readme-activity-graph"><img alt="Lior dawit Activity Graph" src="https://activity-graph.herokuapp.com/graph?username=Dawitlior&bg_color=0D1117&color=5BCDEC&line=5BCDEC&point=FFFFFF&hide_border=true" /></a>
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=	Dawitlior&bg_color=000000&color=ecdfeb&line=02d91b&point=f8f7f7&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 <br/>
 <br/>
