@@ -35,7 +35,7 @@
 
 <br/>
 <br/>
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.cyclic.app/graph?username=	Dawitlior&bg_color=000000&color=ecdfeb&line=02d91b&point=f8f7f7&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+<a href="https://github-readme-activity-graph.cyclic.app/graph?username=	Dawitlior&bg_color=000000&color=ecdfeb&line=02d91b&point=f8f7f7&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)"> </a>
 
 <br/>
 <br/>
