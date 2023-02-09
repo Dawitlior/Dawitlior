@@ -7,7 +7,7 @@
 
 
 
-- 🌱  i'm currently learning **Node.js**
+- 🌱  i'm currently learning ** like always ;)
 
 - 📫  How to reach me **Liordawit777@walla.com**
  
