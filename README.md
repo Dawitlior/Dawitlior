@@ -7,7 +7,7 @@
 
 
 
-- 🌱  i'm currently learning ** like always ;)
+- 🌱  i'm currently learning ** always **;)
 
 - 📫  How to reach me **Liordawit777@walla.com**
  
