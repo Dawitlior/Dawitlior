@@ -10,7 +10,6 @@
  
 
 
-<h4 align="left">Linkedn page :https://www.linkedin.com/in/lior-dawit-07464b236/</h4>
 <p align="left">
 </p>
 
