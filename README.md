@@ -8,8 +8,6 @@
 
 - 📫  How to reach me **Liordawit777@walla.com**
  
-- My CV - https://did.li/CeZw5
-
 
 <p align="left">
 </p>
