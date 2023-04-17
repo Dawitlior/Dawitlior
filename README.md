@@ -8,7 +8,7 @@
 
 - 📫  How to reach me **Liordawit777@walla.com**
  
-- 📫 My CV - https://docs.google.com/document/d/1P9UBfRp-ZIHjBJg3cL_kmxj5muE9XQcXoSABj-y-rIU/edit?usp=sharing
+- My CV - https://docs.google.com/document/d/1P9UBfRp-ZIHjBJg3cL_kmxj5muE9XQcXoSABj-y-rIU/edit?usp=sharing
 
 
 <p align="left">
