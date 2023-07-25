@@ -6,7 +6,7 @@
 
 
 
-- 📫  How to reach me **Liordawit777@walla.com**
+- 📫  How to reach me **Dawitlior777@gmail.com**
  
 
 <p align="left">
