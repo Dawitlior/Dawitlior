@@ -20,19 +20,7 @@
     </a>
 </p>
 
-## 📊 My Github Stats
-
-  <br/>
-    <a href="https://github.com/Dawitlior/github-readme-stats"><img alt="Lior dawit Github Stats" src="https://github-readme-stats.vercel.app/api?username=Dawitlior&show_icons=true&count_private=true&theme=react&hide_border=true&bg_color=0D1117" /></a>
-  <a href="https://github.com/Dawitlior/github-readme-stats"><img alt="Lior's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Dawitlior&langs_count=8&count_private=true&layout=compact&theme=react&hide_border=true&bg_color=0D1117" /></a>
-  <br/>
-
-<br/>
-<br/>
-<a href="https://github-readme-activity-graph.cyclic.app/graph?username=	Dawitlior&bg_color=000000&color=ecdfeb&line=02d91b&point=f8f7f7&area=true&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)"> </a>
-
-<br/>
 <br/>
 
-</p>
+
  
