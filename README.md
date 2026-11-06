@@ -6,7 +6,11 @@ My favorite part is the one before the building: getting to the real problem. A 
 
 Trading is where I come from — 4–5 years in the markets — so the projects closest to me sit where trading meets technology: exchange integrations, quantitative models, tools that turn market data into decisions.
 
-<img src="./assets/stack-ticker.svg" alt="Make · n8n · REST APIs · Webhooks · Claude agents · PostgreSQL · Supabase · Stripe · GitHub Actions · VPS" width="100%">
+<img src="./assets/divider.svg" alt="" width="100%">
+
+<img src="./assets/orbit.svg" alt="Toolbox: Make, n8n, Claude agents, REST APIs, webhooks, PostgreSQL, Supabase, Stripe, GitHub Actions, Telegram, Discord, VPS" width="100%">
+
+<img src="./assets/divider.svg" alt="" width="100%">
 
 ## Selected work
 
@@ -22,6 +26,8 @@ An online platform for a trading educator, in active development and monitoring.
 - Built through continuous discovery with the client: mapping their manual workflows, deciding what to automate, and shipping in small iterations.
 - **Stack:** PostgreSQL, Supabase, Netlify, CDN.
 
+<img src="./assets/divider.svg" alt="" width="100%">
+
 ### Orca — trading-journal platform · [orcainvestment.co.il](https://orcainvestment.co.il)
 A SaaS product for active traders, live in production.
 
@@ -31,6 +37,8 @@ A SaaS product for active traders, live in production.
 - Subscription billing, a multilingual interface (including right-to-left), and an early-access community with its own Discord bot.
 - A complete content and campaign automation around the product's brand: market-news monitoring, on-brand post generation, human approval on Telegram, scheduled publishing, with cost caps enforced in code.
 - **Stack:** Supabase (PostgreSQL, Edge Functions), Stripe, REST APIs, Make, Claude API.
+
+<img src="./assets/divider.svg" alt="" width="100%">
 
 ### Investment research & analysis platform · since 2024
 An end-to-end research workflow that runs by itself every night.
@@ -45,3 +53,5 @@ An end-to-end research workflow that runs by itself every night.
 
 ## Contact
 dawitlior777@gmail.com
+
+<img src="./assets/footer.svg" alt="" width="100%">
