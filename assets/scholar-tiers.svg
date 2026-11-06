@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" width="100%" role="img" aria-label="Scholar Gatekeeper: four access tiers that unlock in sequence">
+  <defs>
+    <linearGradient id="g4" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+  </defs>
+  <g font-family="'Segoe UI', Helvetica, Arial, sans-serif" fill="#8b95a5" text-anchor="middle">
+    <g>
+      <rect x="40" y="150" width="200" height="70" rx="10" fill="url(#g4)" fill-opacity="0.12" stroke="url(#g4)" stroke-width="2"/>
+      <rect x="40" y="150" width="200" height="70" rx="10" fill="url(#g4)" fill-opacity="0"><animate attributeName="fill-opacity" values="0;0.45;0.45;0" keyTimes="0;0.08;0.9;1" dur="10s" repeatCount="indefinite"/></rect>
+      <text x="140" y="180" font-size="16" font-weight="700">Visitor</text><text x="140" y="200" font-size="12">public pages</text>
+    </g>
+    <g>
+      <rect x="280" y="115" width="200" height="105" rx="10" fill="url(#g4)" fill-opacity="0.12" stroke="url(#g4)" stroke-width="2"/>
+      <rect x="280" y="115" width="200" height="105" rx="10" fill="url(#g4)" fill-opacity="0"><animate attributeName="fill-opacity" values="0;0;0.45;0.45;0" keyTimes="0;0.2;0.28;0.9;1" dur="10s" repeatCount="indefinite"/></rect>
+      <text x="380" y="160" font-size="16" font-weight="700">Registered</text><text x="380" y="180" font-size="12">email verified</text><text x="380" y="198" font-size="12">free content</text>
+    </g>
+    <g>
+      <rect x="520" y="80" width="200" height="140" rx="10" fill="url(#g4)" fill-opacity="0.12" stroke="url(#g4)" stroke-width="2"/>
+      <rect x="520" y="80" width="200" height="140" rx="10" fill="url(#g4)" fill-opacity="0"><animate attributeName="fill-opacity" values="0;0;0.45;0.45;0" keyTimes="0;0.4;0.48;0.9;1" dur="10s" repeatCount="indefinite"/></rect>
+      <text x="620" y="140" font-size="16" font-weight="700">Approved</text><text x="620" y="160" font-size="12">admin approval</text><text x="620" y="178" font-size="12">booking calendar</text>
+    </g>
+    <g>
+      <rect x="760" y="45" width="200" height="175" rx="10" fill="url(#g4)" fill-opacity="0.12" stroke="url(#g4)" stroke-width="2"/>
+      <rect x="760" y="45" width="200" height="175" rx="10" fill="url(#g4)" fill-opacity="0"><animate attributeName="fill-opacity" values="0;0;0.45;0.45;0" keyTimes="0;0.6;0.68;0.9;1" dur="10s" repeatCount="indefinite"/></rect>
+      <text x="860" y="120" font-size="16" font-weight="700">Course student</text><text x="860" y="141" font-size="12">full course</text><text x="860" y="159" font-size="12">lesson unlocks after lesson</text>
+    </g>
+    <text x="500" y="26" font-size="13">role-based access control — enforced in the database, not just the interface</text>
+  </g>
+  <circle r="6" fill="#22d3ee" cx="0" cy="0">
+    <animateMotion dur="10s" repeatCount="indefinite" path="M140 140 L380 105 L620 70 L860 35" keyTimes="0;1" keyPoints="0;1" calcMode="linear"/>
+  </circle>
+</svg>

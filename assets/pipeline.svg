@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 200" width="100%" role="img" aria-label="From raw data to a decision, automatically">
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <path id="p" d="M110 100 H890" stroke="none" fill="none"/>
+  <g stroke="#8b95a5" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="6 6" fill="none">
+    <path d="M180 100 H300"><animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite"/></path>
+    <path d="M440 100 H560"><animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite"/></path>
+    <path d="M700 100 H820"><animate attributeName="stroke-dashoffset" from="24" to="0" dur="1.2s" repeatCount="indefinite"/></path>
+  </g>
+  <g font-family="'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <g><rect x="40" y="65" width="140" height="70" rx="12" fill="none" stroke="url(#g2)" stroke-width="2"><animate attributeName="stroke-opacity" values="1;0.35;1" dur="5s" begin="0s" repeatCount="indefinite"/></rect><text x="110" y="97" font-size="17" font-weight="700" fill="#8b95a5">Sources</text><text x="110" y="119" font-size="12" fill="#8b95a5">APIs · feeds · files</text></g>
+    <g><rect x="300" y="65" width="140" height="70" rx="12" fill="none" stroke="url(#g2)" stroke-width="2"><animate attributeName="stroke-opacity" values="1;0.35;1" dur="5s" begin="1.2s" repeatCount="indefinite"/></rect><text x="370" y="97" font-size="17" font-weight="700" fill="#8b95a5">Pipeline</text><text x="370" y="119" font-size="12" fill="#8b95a5">clean · unify · alert</text></g>
+    <g><rect x="560" y="65" width="140" height="70" rx="12" fill="none" stroke="url(#g2)" stroke-width="2"><animate attributeName="stroke-opacity" values="1;0.35;1" dur="5s" begin="2.4s" repeatCount="indefinite"/></rect><text x="630" y="97" font-size="17" font-weight="700" fill="#8b95a5">Models</text><text x="630" y="119" font-size="12" fill="#8b95a5">score · backtest</text></g>
+    <g><rect x="820" y="65" width="140" height="70" rx="12" fill="none" stroke="url(#g2)" stroke-width="2"><animate attributeName="stroke-opacity" values="1;0.35;1" dur="5s" begin="3.6s" repeatCount="indefinite"/></rect><text x="890" y="97" font-size="17" font-weight="700" fill="#8b95a5">Delivery</text><text x="890" y="119" font-size="12" fill="#8b95a5">Sheets · Discord</text></g>
+    <text x="500" y="175" font-size="13" fill="#8b95a5" opacity="0.9">raw data  →  a decision, automatically, every night</text>
+  </g>
+  <g filter="url(#glow)">
+    <circle r="6" fill="#06b6d4"><animateMotion dur="5s" repeatCount="indefinite" begin="0s"><mpath href="#p"/></animateMotion></circle>
+    <circle r="6" fill="#8b5cf6"><animateMotion dur="5s" repeatCount="indefinite" begin="1.7s"><mpath href="#p"/></animateMotion></circle>
+    <circle r="6" fill="#06b6d4"><animateMotion dur="5s" repeatCount="indefinite" begin="3.4s"><mpath href="#p"/></animateMotion></circle>
+  </g>
+</svg>

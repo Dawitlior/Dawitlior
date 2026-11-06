@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 266" width="100%" role="img" aria-label="Orca: many exchanges, one normalized trade journal">
+  <defs>
+    <linearGradient id="g3" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+    <filter id="gl" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <text x="95" y="252" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="11" fill="#8b95a5">each with its own API &amp; auth</text>
+  <g stroke="#8b95a5" stroke-opacity="0.4" stroke-width="1.5" fill="none">
+    <path id="a1" d="M150 40 C 300 40, 330 130, 440 130"/>
+    <path id="a2" d="M150 85 C 290 85, 340 130, 440 130"/>
+    <path id="a3" d="M150 130 H440"/>
+    <path id="a4" d="M150 175 C 290 175, 340 130, 440 130"/>
+    <path id="a5" d="M150 220 C 300 220, 330 130, 440 130"/>
+    <path id="b1" d="M560 130 H700"/>
+  </g>
+  <g font-family="'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle" fill="#8b95a5">
+    <g font-size="12">
+      <rect x="40" y="24" width="110" height="32" rx="8" fill="none" stroke="#8b95a5" stroke-opacity="0.6"/><text x="95" y="45">Exchange A</text>
+      <rect x="40" y="69" width="110" height="32" rx="8" fill="none" stroke="#8b95a5" stroke-opacity="0.6"/><text x="95" y="90">Exchange B</text>
+      <rect x="40" y="114" width="110" height="32" rx="8" fill="none" stroke="#8b95a5" stroke-opacity="0.6"/><text x="95" y="135">Exchange C</text>
+      <rect x="40" y="159" width="110" height="32" rx="8" fill="none" stroke="#8b95a5" stroke-opacity="0.6"/><text x="95" y="180">Exchange D</text>
+      <rect x="40" y="204" width="110" height="32" rx="8" fill="none" stroke="#8b95a5" stroke-opacity="0.6"/><text x="95" y="225">Exchange E</text>
+    </g>
+    <g>
+      <rect x="440" y="88" width="120" height="84" rx="14" fill="none" stroke="url(#g3)" stroke-width="2.5"><animate attributeName="stroke-opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/></rect>
+      <text x="500" y="123" font-size="15" font-weight="700">Sync layer</text>
+      <text x="500" y="144" font-size="11.5">normalize · secure keys</text>
+    </g>
+    <g>
+      <rect x="700" y="76" width="260" height="108" rx="14" fill="none" stroke="url(#g3)" stroke-width="2.5"/>
+      <text x="830" y="108" font-size="16" font-weight="700">One trade journal</text>
+      <text x="830" y="130" font-size="12">single data model · multilingual · RTL</text>
+      <text x="830" y="152" font-size="12">Stripe billing · community</text>
+    </g>
+  </g>
+  <g filter="url(#gl)">
+    <circle r="5" fill="#06b6d4"><animateMotion dur="3.2s" repeatCount="indefinite" begin="0s"><mpath href="#a1"/></animateMotion></circle>
+    <circle r="5" fill="#8b5cf6"><animateMotion dur="3.2s" repeatCount="indefinite" begin="0.6s"><mpath href="#a2"/></animateMotion></circle>
+    <circle r="5" fill="#06b6d4"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.2s"><mpath href="#a3"/></animateMotion></circle>
+    <circle r="5" fill="#8b5cf6"><animateMotion dur="3.2s" repeatCount="indefinite" begin="1.8s"><mpath href="#a4"/></animateMotion></circle>
+    <circle r="5" fill="#06b6d4"><animateMotion dur="3.2s" repeatCount="indefinite" begin="2.4s"><mpath href="#a5"/></animateMotion></circle>
+    <circle r="6" fill="#22d3ee"><animateMotion dur="2s" repeatCount="indefinite" begin="0s"><mpath href="#b1"/></animateMotion></circle>
+    <circle r="6" fill="#a78bfa"><animateMotion dur="2s" repeatCount="indefinite" begin="1s"><mpath href="#b1"/></animateMotion></circle>
+  </g>
+</svg>

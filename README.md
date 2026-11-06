@@ -1,64 +1,47 @@
-<div align="center">
-  <br />
-  <h1>LIOR DAWIT</h1>
-  <code>INDICATOR ARCHITECT // PRICE ACTION LOGIC // SYSTEM OPERATOR</code>
-  <br /><br />
+<img src="./assets/banner.svg" alt="Lior Dawit — Systems & Automation Builder" width="100%">
 
-  <p align="center">
-    <img src="https://img.shields.io/badge/MARKET_STRUCTURE-000000?style=for-the-badge&logo=bitcoinsv&logoColor=white" />
-    <img src="https://img.shields.io/badge/LIQUIDITY_HUNTER-000000?style=for-the-badge&logo=target&logoColor=white" />
-    <img src="https://img.shields.io/badge/O%26I_CORE-000000?style=for-the-badge&logo=tradingview&logoColor=white" />
-  </p>
-</div>
+I build automation systems that replace manual, error-prone work with reliable production workflows — API integrations, automated data pipelines, and AI agents embedded in real business processes.
 
----
+My favorite part is the one before the building: getting to the real problem. A client rarely arrives with the right brief, so I talk it through until we both know what is actually worth building. Then I build it, and keep improving it as people use it.
 
-### ⚡ TECHNICAL STACK
-<p align="left">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/React_Native-61DAFB?style=flat-square&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=redux&logoColor=white" />
-</p>
+Trading is where I come from — 4–5 years in the markets — so the projects closest to me sit where trading meets technology: exchange integrations, quantitative models, tools that turn market data into decisions.
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" />
-</p>
+<img src="./assets/stack-ticker.svg" alt="Make · n8n · REST APIs · Webhooks · Claude agents · PostgreSQL · Supabase · Stripe · GitHub Actions · VPS" width="100%">
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white" />
-  <img src="https://img.shields.io/badge/Cypress-17202C?style=flat-square&logo=cypress&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=jest&logoColor=white" />
-  <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat-square&logo=postman&logoColor=white" />
-  <img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white" />
-</p>
+## Selected work
 
----
+Most of my work lives in private repositories (client and commercial projects), so this page shows what each one does and how it is built.
 
-### 📊 OPERATIONAL METRICS
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Dawitlior&show_icons=true&theme=transparent&hide_border=true&title_color=F7931A&icon_color=F7931A&text_color=C9D1D9&rank_icon=github" width="410" />
-</div>
+### Scholar Gatekeeper — learning & scheduling platform · private client
+An online platform for a trading educator, in active development and monitoring.
 
-<div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Dawitlior&theme=transparent&hide_border=true&stroke=F7931A&ring=F7931A&fire=F7931A&currStreakNum=C9D1D9&sideLabels=C9D1D9&dates=C9D1D9" width="390" />
-</div>
+<img src="./assets/scholar-tiers.svg" alt="Four access tiers that unlock in sequence" width="100%">
 
----
+- A four-tier access model with role-based access control enforced in the database.
+- An admin console with an immutable audit log, a booking system with race-condition protection, and a secure video delivery pipeline with a completion-gated course builder.
+- Built through continuous discovery with the client: mapping their manual workflows, deciding what to automate, and shipping in small iterations.
+- **Stack:** PostgreSQL, Supabase, Netlify, CDN.
 
-<div align="center">
-  <p align="center">
-    <a href="https://dossierquant.netlify.app/" target="_blank">
-      <img src="https://img.shields.io/badge/ACCESS_ARCHIVE-000000?style=for-the-badge&logo=netlify&logoColor=white" />
-    </a>
-  </p>
-  <sub>LIOR DAWIT // © 2026 // SYSTEM TERMINAL</sub>
-</div>
+### Orca — trading-journal platform · [orcainvestment.co.il](https://orcainvestment.co.il)
+A SaaS product for active traders, live in production.
+
+<img src="./assets/orca-sync.svg" alt="Many exchanges, one normalized trade journal" width="100%">
+
+- Automatic trade sync from leading crypto exchanges, each with its own API and authentication, into a single data model.
+- Subscription billing, a multilingual interface (including right-to-left), and an early-access community with its own Discord bot.
+- A complete content and campaign automation around the product's brand: market-news monitoring, on-brand post generation, human approval on Telegram, scheduled publishing, with cost caps enforced in code.
+- **Stack:** Supabase (PostgreSQL, Edge Functions), Stripe, REST APIs, Make, Claude API.
+
+### Investment research & analysis platform · since 2024
+An end-to-end research workflow that runs by itself every night.
+
+<img src="./assets/pipeline.svg" alt="From raw data to a decision, automatically" width="100%">
+
+- Data pipelines that pull, clean and unify market, macroeconomic and on-chain data, with alerting and fallbacks.
+- Quantitative models for systematic strategies — signal design, multi-factor risk scoring, parameter optimization — validated through a backtesting engine.
+- Results delivered automatically to Google Sheets and Discord.
+- Public technical write-up: [the research dossier](https://dossierquant.netlify.app/).
+- **Stack:** data pipelines, backtesting, Google Sheets API.
+
+## Contact
+dawitlior777@gmail.com
