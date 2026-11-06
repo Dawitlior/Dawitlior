@@ -1,4 +1,4 @@
-<img src="./assets/banner.svg" alt="Lior Dawit — Systems & Automation Builder" width="100%">
+<img src="./assets/hero.gif" alt="Lior Dawit — Systems & Automation Builder. A cloud of scattered data organizes itself into a reliable pipeline." width="100%">
 
 I build automation systems that replace manual, error-prone work with reliable production workflows — API integrations, automated data pipelines, and AI agents embedded in real business processes.
 
