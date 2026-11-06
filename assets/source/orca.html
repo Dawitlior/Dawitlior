@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#070b14;overflow:hidden}#wrap{position:relative;width:800px;height:300px;overflow:hidden;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}canvas{display:block}.lab{position:absolute;font:11.5px "SF Mono",Menlo,Consolas,monospace;color:#cbd5e1;transform:translate(-50%,-50%);white-space:nowrap}.cap{position:absolute;left:0;right:0;top:12px;text-align:center;font:12px "SF Mono",Menlo,Consolas,monospace;color:#94a3b8}.bar{position:absolute;left:0;bottom:0;height:3px;background:linear-gradient(90deg,#06b6d4,#8b5cf6)}</style></head><body><div id="wrap">
+<div class="cap">each exchange has its own API &amp; authentication — one normalized data model</div>
+<div id="labs"></div><div class="bar" id="bar"></div></div>
+<script src="three.min.js"></script><script src="common.js"></script><script>
+const T=8,R=rng(5);
+const ex=[[-7.2,3.0,-0.6],[-7.9,1.5,0.4],[-8.1,0,-0.2],[-7.9,-1.5,0.5],[-7.2,-3.0,-0.5]];
+const names=['Exchange A','Exchange B','Exchange C','Exchange D','Exchange E'];
+const coreP=new THREE.Vector3(-0.6,0,0),jP=new THREE.Vector3(6.4,0,0);
+const labsEl=document.getElementById('labs');
+function lab(txt,c){const d=document.createElement('div');d.className='lab';d.textContent=txt;d.style.color=c||'#cbd5e1';labsEl.appendChild(d);return d}
+const exL=names.map(n=>lab(n,'#94a3b8')),coreL=lab('Sync layer','#22d3ee'),jL=lab('One trade journal','#a78bfa');
+const exM=[];
+ex.forEach((p,i)=>{const m=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(0.42,0)),new THREE.LineBasicMaterial({color:0x7dd3fc,transparent:true,opacity:0.95}));m.position.set(...p);scene.add(m);exM.push(m);const g=glow('#22d3ee',1.6);g.position.set(...p);exM[i].g=g});
+const core=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(1.25,1)),new THREE.LineBasicMaterial({color:0x22d3ee,transparent:true,opacity:0.9}));core.position.copy(coreP);scene.add(core);
+const core2=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(0.7,0)),new THREE.LineBasicMaterial({color:0xa78bfa,transparent:true,opacity:0.9}));core2.position.copy(coreP);scene.add(core2);
+const coreG=glow('#8b5cf6',4.4);coreG.position.copy(coreP);
+// journal cards
+const cards=[];
+for(let i=0;i<4;i++){const e=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(3.0,2.0,0.05)),new THREE.LineBasicMaterial({color:i==0?0xc4b5fd:0x7c6fd8,transparent:true,opacity:0.95-i*0.18}));e.position.set(jP.x+i*0.38,jP.y-i*0.25+0.4,-i*0.5);scene.add(e);cards.push(e);
+ const ln=new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-1.2,0.5,0),new THREE.Vector3(1.2,0.5,0),new THREE.Vector3(-1.2,0.1,0),new THREE.Vector3(0.6,0.1,0),new THREE.Vector3(-1.2,-0.3,0),new THREE.Vector3(1.0,-0.3,0),new THREE.Vector3(-1.2,-0.7,0),new THREE.Vector3(0.2,-0.7,0)]),new THREE.LineBasicMaterial({color:0xa78bfa,transparent:true,opacity:0.5-i*0.1}));e.add(ln)}
+const jG=glow('#a78bfa',5);jG.position.set(jP.x+0.6,0.2,-0.5);
+// curves
+const curves=ex.map((p,i)=>new THREE.QuadraticBezierCurve3(new THREE.Vector3(...p),new THREE.Vector3(p[0]+3.2,p[1]*0.35,p[2]*2),coreP.clone().add(new THREE.Vector3(-1.2,0,0))));
+curves.forEach(c=>{const l=new THREE.Line(new THREE.BufferGeometry().setFromPoints(c.getPoints(48)),new THREE.LineBasicMaterial({color:0x38bdf8,transparent:true,opacity:0.28}));scene.add(l)});
+const outC=new THREE.LineCurve3(coreP.clone().add(new THREE.Vector3(1.3,0,0)),new THREE.Vector3(jP.x-1.8,0.3,0));
+scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(outC.getPoints(2)),new THREE.LineBasicMaterial({color:0xa78bfa,transparent:true,opacity:0.4})));
+const PKS=[];
+for(let i=0;i<5;i++)for(let k=0;k<5;k++){const s=glow(k%2?'#22d3ee':'#7dd3fc',0.62);PKS.push({s,c:curves[i],i,k})}
+const OUT=[];for(let k=0;k<8;k++)OUT.push(glow('#c4b5fd',0.7));
+const bar=document.getElementById('bar');
+window.renderAt=function(t){
+  const ang=2*Math.PI*t/T;
+  PKS.forEach(p=>{const u=((t/T)*2+p.k/5+p.i*0.17)%1;const v=p.c.getPoint(u);p.s.position.copy(v);p.s.material.opacity=Math.sin(u*Math.PI)*0.95});
+  OUT.forEach((s,k)=>{const u=((t/T)*3+k/8)%1;const v=outC.getPoint(u);s.position.copy(v);s.material.opacity=Math.sin(u*Math.PI)});
+  exM.forEach((m,i)=>{m.rotation.y=ang*(i%2?1:-1)+i;m.rotation.x=ang*0.5+i;m.g.material.opacity=0.55+0.35*Math.sin(ang*2+i)});
+  core.rotation.y=ang*2;core.rotation.x=ang;core2.rotation.y=-ang*3;core2.rotation.z=ang*2;
+  coreG.material.opacity=0.5+0.3*Math.sin(ang*4);
+  cards.forEach((c,i)=>{c.position.y=jP.y-i*0.25+0.4+0.08*Math.sin(ang*2+i)});
+  jG.material.opacity=0.45+0.3*Math.sin(ang*3);
+  const a=0.35*Math.sin(ang);
+  cam.position.set(Math.sin(a)*5,2.4+0.6*Math.sin(ang*2),12.6*Math.cos(a)+2);cam.lookAt(-0.2,0,0);
+  renderer.render(scene,cam);
+  ex.forEach((p,i)=>place(exL[i],new THREE.Vector3(p[0],p[1],p[2]),-62,0));
+  place(coreL,coreP.clone(),0,62);place(jL,jP.clone(),10,72);
+  bar.style.width=(100*t/T)+'%';
+};
+window.ready=true;renderAt(0);
+</script></body></html>

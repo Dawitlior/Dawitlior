@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#070b14;overflow:hidden}#wrap{position:relative;width:800px;height:300px;overflow:hidden;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}canvas{display:block}.lab{position:absolute;font:11.5px "SF Mono",Menlo,Consolas,monospace;color:#cbd5e1;transform:translate(-50%,-50%);white-space:nowrap}.pill{position:absolute;font:12px "SF Mono",Menlo,Consolas,monospace;color:#e5e7eb;transform:translate(-50%,-50%);white-space:nowrap;padding:3px 10px;border-radius:12px;background:rgba(11,18,32,.88);border:1px solid #38bdf8}.cap{position:absolute;left:0;right:0;top:12px;text-align:center;font:12px "SF Mono",Menlo,Consolas,monospace;color:#94a3b8}.bar{position:absolute;left:0;bottom:0;height:3px;background:linear-gradient(90deg,#06b6d4,#8b5cf6)}</style></head><body><div id="wrap">
+<div class="cap">the toolbox</div><div id="labs"></div><div class="bar" id="bar"></div></div>
+<script src="three.min.js"></script><script src="common.js"></script><script>
+const T=12,R=rng(9);
+const RINGS=[{r:2.7,tilt:0.45,yaw:0.2,rev:1,items:['Make','n8n','Claude agents']},
+ {r:4.0,tilt:-0.5,yaw:-0.4,rev:-1,items:['REST APIs','Webhooks','PostgreSQL','Supabase']},
+ {r:5.3,tilt:0.2,yaw:0.9,rev:1,items:['Stripe','GitHub Actions','Telegram','Discord','VPS']}];
+const labsEl=document.getElementById('labs');
+function rot(p,tilt,yaw){const c=Math.cos(tilt),s=Math.sin(tilt);let y=p.y*c-p.z*s,z=p.y*s+p.z*c;p.y=y;p.z=z;const cy=Math.cos(yaw),sy=Math.sin(yaw);const x=p.x*cy+p.z*sy;z=-p.x*sy+p.z*cy;p.x=x*1.75;p.z=z;return p}
+const items=[];
+RINGS.forEach((rg,ri)=>{
+  const pts=[];for(let k=0;k<=128;k++){const th=k/128*2*Math.PI;pts.push(rot(new THREE.Vector3(rg.r*Math.cos(th),0,rg.r*Math.sin(th)),rg.tilt,rg.yaw))}
+  scene.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0x38bdf8,transparent:true,opacity:0.28})));
+  rg.items.forEach((n,i)=>{const d=document.createElement('div');d.className='pill';d.textContent=n;d.style.borderColor=['#22d3ee','#818cf8','#a78bfa'][ri];labsEl.appendChild(d);const g=glow(['#22d3ee','#818cf8','#a78bfa'][ri],0.9);items.push({rg,i,n:rg.items.length,d,g,ri})})
+});
+const core=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(1.2,1)),new THREE.LineBasicMaterial({color:0x22d3ee}));scene.add(core);
+const core2=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.IcosahedronGeometry(0.62,0)),new THREE.LineBasicMaterial({color:0xa78bfa}));scene.add(core2);
+const cg=glow('#8b5cf6',5);
+const cl=document.createElement('div');cl.className='lab';cl.textContent='Systems in production';cl.style.color='#94a3b8';labsEl.appendChild(cl);
+// dust
+const N=400,pos=new Float32Array(N*3);for(let i=0;i<N;i++){const u=R(),v=R(),w=R(),r=7*Math.cbrt(u),th=2*Math.PI*v,ph=Math.acos(2*w-1);pos[i*3]=r*Math.sin(ph)*Math.cos(th)*2.1;pos[i*3+1]=r*Math.sin(ph)*Math.sin(th)*0.7;pos[i*3+2]=r*Math.cos(ph)}
+const dg=new THREE.BufferGeometry();dg.setAttribute('position',new THREE.BufferAttribute(pos,3));
+const dust=new THREE.Points(dg,new THREE.PointsMaterial({size:0.12,map:sprite,color:0x64748b,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending}));scene.add(dust);
+const bar=document.getElementById('bar');
+window.renderAt=function(t){
+  const ang=2*Math.PI*t/T;
+  core.rotation.y=ang*2;core.rotation.x=ang;core2.rotation.y=-ang*3;core2.rotation.z=ang*2;cg.material.opacity=0.5+0.3*Math.sin(ang*4);
+  dust.rotation.y=ang*0.5;
+  const a=0.18*Math.sin(ang);
+  cam.position.set(Math.sin(a)*6,5.2+0.5*Math.sin(ang*2),13.4*Math.cos(a));cam.lookAt(0,0.2,0);cam.updateMatrixWorld();
+  items.forEach(it=>{const th=2*Math.PI*(it.i/it.n+it.rg.rev*t/T);
+    const p=rot(new THREE.Vector3(it.rg.r*Math.cos(th),0,it.rg.r*Math.sin(th)),it.rg.tilt,it.rg.yaw);
+    it.g.position.copy(p);
+    const cp=p.clone().applyMatrix4(cam.matrixWorldInverse);const depth=Math.min(1,Math.max(0,(-cp.z-9)/9));
+    it.d.dataset.p=JSON.stringify([p.x,p.y,p.z]);it.d.dataset.o=1-0.62*depth;it.g.material.opacity=1-0.6*depth});
+  renderer.render(scene,cam);
+  items.forEach(it=>{const [x,y,z]=JSON.parse(it.d.dataset.p);place(it.d,new THREE.Vector3(x,y,z));it.d.style.opacity=it.d.dataset.o});
+  place(cl,new THREE.Vector3(0,-2.0,0),0,6);
+  bar.style.width=(100*t/T)+'%';
+};
+window.ready=true;renderAt(0);
+</script></body></html>

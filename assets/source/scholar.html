@@ -1,0 +1,52 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#070b14;overflow:hidden}#wrap{position:relative;width:800px;height:300px;overflow:hidden;font-family:-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}canvas{display:block}.lab{position:absolute;font:11.5px "SF Mono",Menlo,Consolas,monospace;color:#cbd5e1;transform:translate(-50%,-50%);white-space:nowrap}.pill{position:absolute;font:12px "SF Mono",Menlo,Consolas,monospace;color:#e5e7eb;transform:translate(-50%,-50%);white-space:nowrap;padding:3px 10px;border-radius:12px;background:rgba(11,18,32,.88);border:1px solid #38bdf8}.cap{position:absolute;left:0;right:0;top:12px;text-align:center;font:12px "SF Mono",Menlo,Consolas,monospace;color:#94a3b8}.bar{position:absolute;left:0;bottom:0;height:3px;background:linear-gradient(90deg,#06b6d4,#8b5cf6)}</style></head><body><div id="wrap">
+<div class="cap">role-based access control — enforced in the database, not just the interface</div>
+<div id="labs"></div><div class="bar" id="bar"></div></div>
+<script src="three.min.js"></script><script src="common.js"></script><script>
+const T=8;
+const X=[-6.6,-2.2,2.2,6.6],HT=[1.0,1.9,2.8,3.7],BASE=-2.3;
+const COL=['#22d3ee','#38bdf8','#818cf8','#a78bfa'];
+const NAMES=['Visitor','Registered','Approved','Course student'],SUB=['public pages','email verified','admin approval','full course'];
+const UT=[0.5,2.2,3.9,5.6];
+const labsEl=document.getElementById('labs');
+function lab(txt,c,cls){const d=document.createElement('div');d.className=cls||'lab';d.textContent=txt;d.style.color=c;labsEl.appendChild(d);return d}
+const steps=[],gl=[],nameL=[],subL=[],stL=[];
+const GRAY=new THREE.Color('#475569');
+for(let i=0;i<4;i++){
+  const g=new THREE.BoxGeometry(3.4,HT[i],2.4);
+  const fill=new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:0x22d3ee,transparent:true,opacity:0.05,depthWrite:false}));
+  const ed=new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:0x475569}));
+  const grp=new THREE.Group();grp.add(fill);grp.add(ed);grp.position.set(X[i],BASE+HT[i]/2,0);scene.add(grp);steps.push({fill,ed});
+  const s=glow(COL[i],3.6);s.position.set(X[i],BASE+HT[i]+0.05,0);gl.push(s);
+  nameL.push(lab(NAMES[i],'#e5e7eb'));subL.push(lab(SUB[i],'#94a3b8'));stL.push(lab('locked','#64748b'));
+}
+// floor grid
+const fl=new THREE.GridHelper(30,30,0x1e293b,0x111a2b);fl.position.y=BASE-0.02;scene.add(fl);
+const orb=glow('#ffffff',1.2);const core=new THREE.Mesh(new THREE.SphereGeometry(0.16,16,16),new THREE.MeshBasicMaterial({color:0xffffff}));scene.add(core);
+const trail=[];for(let k=0;k<10;k++)trail.push(glow('#7dd3fc',0.9-k*0.06));
+const P=i=>new THREE.Vector3(X[i],BASE+HT[i]+0.7,0);
+function orbPos(t){
+  if(t<=UT[0])return P(0);
+  for(let i=0;i<3;i++){if(t<=UT[i+1]){const u=ss(UT[i]+0.15,UT[i+1]-0.15,t);const a=P(i),b=P(i+1);const v=a.clone().lerp(b,u);v.y+=1.1*Math.sin(Math.PI*u);return v}}
+  return P(3)}
+const bar=document.getElementById('bar');
+window.renderAt=function(t){
+  const ang=2*Math.PI*t/T,fade=1-ss(7.1,7.9,t);
+  for(let i=0;i<4;i++){
+    const l=ss(UT[i]-0.2,UT[i]+0.2,t)*fade;
+    const c=GRAY.clone().lerp(new THREE.Color(COL[i]),l);
+    steps[i].ed.material.color.copy(c);steps[i].fill.material.opacity=0.05+0.14*l;steps[i].fill.material.color.set(COL[i]);
+    gl[i].material.opacity=0.8*l;
+    stL[i].textContent=l>0.5?'unlocked ✓':'locked';stL[i].style.color=l>0.5?COL[i]:'#64748b';
+    nameL[i].style.opacity=0.55+0.45*l;
+  }
+  const v=orbPos(t),o=ss(0,0.4,t)*fade;
+  orb.position.copy(v);core.position.copy(v);orb.material.opacity=o;core.visible=o>0.2;
+  trail.forEach((s,k)=>{const p=orbPos(Math.max(0,t-(k+1)*0.07));s.position.copy(p);s.material.opacity=o*(0.5-k*0.045)});
+  const a=0.22*Math.sin(ang);
+  cam.position.set(Math.sin(a)*5,3.8+0.4*Math.sin(ang*2),14.6*Math.cos(a)+1);cam.lookAt(0,-0.1,0);
+  renderer.render(scene,cam);
+  for(let i=0;i<4;i++){place(nameL[i],new THREE.Vector3(X[i],BASE+HT[i]+1.7,0));place(subL[i],new THREE.Vector3(X[i],BASE-0.45,1.4),0,0);place(stL[i],new THREE.Vector3(X[i],BASE-0.95,1.4))}
+  bar.style.width=(100*t/T)+'%';
+};
+window.ready=true;renderAt(0);
+</script></body></html>
