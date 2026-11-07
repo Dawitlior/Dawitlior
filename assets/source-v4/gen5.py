@@ -95,10 +95,10 @@ import sys as _s0
 _s0.path.insert(0,'.')
 import handsketch as _hs0
 _HB,_HT=_hs0.hand()
-WRX,WRY,ROT=684.0,379.0,-38.0
-_tips=[_hs0.rotp(t,ROT) for n,t in _HT]
+WRX,WRY,ROT=990.0,262.0,114.0
+_tips=[_hs0.rotp((-t[0],t[1]),ROT) for n,t in _HT]
 _maxy=max(t[1] for t in _tips)+WRY
-OFF=int(_maxy+118+92)
+OFF=396+92
 H=OFF+640
 o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%" role="img" aria-label="Lior Dawit — Systems and Automation Builder. A hand conducting a live system map connecting exchange APIs, Make, Claude agents, Supabase, Stripe, Google Workspace, Discord, Telegram, X, Netlify, VPS and GitHub Actions.">')
 o.append('''<style>
@@ -116,6 +116,8 @@ o.append('''<defs>
 o.append(f'<rect width="{W}" height="{H}" fill="url(#grid)"/>')
 BANNER_INNER=open('/Users/liordawit/Documents/My agent/job-hunt/github-profile/assets/banner.svg',encoding='utf-8').read()
 BANNER_INNER=BANNER_INNER[BANNER_INNER.index('>')+1:BANNER_INNER.rindex('</svg>')]
+import re as _rx0
+BANNER_INNER=_rx0.sub(r'<g transform="translate\(700,52\)">.*?</g>','',BANNER_INNER,flags=_rx0.S)
 BANNER_INNER=BANNER_INNER.replace('<circle cx="220" cy="150" r="130" fill="#06b6d4" opacity="0.24" filter="url(#blur)">','<circle cx="220" cy="150" r="190" fill="url(#orbc)" opacity="0.9">').replace('<circle cx="780" cy="190" r="140" fill="#8b5cf6" opacity="0.24" filter="url(#blur)">','<circle cx="780" cy="190" r="200" fill="url(#orbv)" opacity="0.9">')
 import re as _rx
 _parts=BANNER_INNER.split('<line ')
@@ -257,29 +259,28 @@ import sys,math as _mm
 sys.path.insert(0,'.')
 import handsketch as hs
 HBODY,HTIPS=hs.hand()
-ARM=hs.arm()
+ARM=hs.arm(260)
 pass
 o.append('<g id="hand-layer">')
-# slit the arm comes out of
-o.append('<ellipse cx="640" cy="323" rx="64" ry="11" fill="url(#slit)"/><path d="M580 323 C 610 316, 670 316, 700 323" fill="none" stroke="var(--txt)" stroke-width="1.4" opacity="0.55"/>')
 # strings (behind the hand), from the tied fingertips to the process cards
 cols=["#db2777","#7c3aed","#0891b2","#7c3aed","#db2777"]
 durs=[3.6,3.0,2.6,3.2,3.8]
-order=["pinky","ring","middle","index","thumb"]
 tipmap=dict(HTIPS)
+_abs={nm:(lambda p:(p[0]+WRX,p[1]+WRY))(hs.rotp((-t[0],t[1]),ROT)) for nm,t in HTIPS}
+order=sorted(_abs,key=lambda n:_abs[n][0])
 for k,nm in enumerate(order):
     lx,ly=tipmap[nm]
-    ax,ay=hs.rotp((lx,ly),ROT)
+    ax,ay=hs.rotp((-lx,ly),ROT)
     ax+=WRX;ay+=WRY
     bx,by=CARDS[k][0],OFF-92
-    d=f"M{ax:.1f} {ay:.1f} C {ax:.1f} {ay+100:.1f}, {bx:.1f} {by-120:.1f}, {bx:.1f} {by:.1f}"
+    d=f"M{ax:.1f} {ay:.1f} L{ax:.1f} 336 C {ax:.1f} 384, {bx:.1f} {by-62:.1f}, {bx:.1f} {by:.1f}"
     sway=f'<animateTransform attributeName="transform" type="rotate" values="0 {ax:.1f} {ay:.1f};0.3 {ax:.1f} {ay:.1f};0 {ax:.1f} {ay:.1f};-0.3 {ax:.1f} {ay:.1f};0 {ax:.1f} {ay:.1f}" dur="{durs[k]+1.5}s" repeatCount="indefinite"/>'
     o.append(f'<g>{sway}<path id="str{k}" d="{d}" fill="none" stroke="var(--txt)" stroke-width="1.1" stroke-opacity="0.85" stroke-linecap="round"/>'
              f'<circle cx="{bx:.1f}" cy="{by}" r="3.4" fill="var(--node)" stroke="var(--txt)" stroke-width="1.2"/>'
              f'<circle cx="{bx:.1f}" cy="{by}" r="3" fill="none" stroke="{cols[k]}" stroke-width="1.6" opacity="0"><animate attributeName="r" values="3;16" dur="{durs[k]}s" begin="{durs[k]*0.82+k*0.4:.2f}s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.9;0" dur="{durs[k]}s" begin="{durs[k]*0.82+k*0.4:.2f}s" repeatCount="indefinite"/></circle>'
              f'<circle r="3.2" fill="{cols[k]}" filter="url(#gl)"><animateMotion dur="{durs[k]}s" repeatCount="indefinite" begin="{k*0.4:.1f}s"><mpath href="#str{k}"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.12;0.88;1" dur="{durs[k]}s" begin="{k*0.4:.1f}s" repeatCount="indefinite"/></circle></g>')
 # arm + hand, gently bobbing
-o.append(f'<g transform="translate({WRX},{WRY}) rotate({ROT})"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 2.5;0 0;0 -1.5;0 0" dur="5s" repeatCount="indefinite"/>{ARM}{HBODY}</g></g>')
+o.append(f'<g transform="translate({WRX},{WRY}) rotate({ROT}) scale(-1,1)"><g><animateTransform attributeName="transform" type="translate" values="0 0;0 2.5;0 0;0 -1.5;0 0" dur="5s" repeatCount="indefinite"/>{ARM}{HBODY}</g></g>')
 o.append('</g>')
 o.append('</svg>')
 open("system-map.svg","w",encoding="utf-8").write("\n".join(o))

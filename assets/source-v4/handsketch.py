@@ -21,6 +21,7 @@ def smooth(pts,closed=True,jit=0.0,seed=1):
         c2=(p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6)
         d+=f"C {c1[0]:.1f} {c1[1]:.1f}, {c2[0]:.1f} {c2[1]:.1f}, {p2[0]:.1f} {p2[1]:.1f} "
     return d+("Z" if closed else "")
+PALM_SIDE=True
 INK="var(--txt)";PAPER="var(--node)";PAPER2="var(--node2)"
 def ink(d,w=1.5,fill=None,op=1,extra=""):
     f=fill if fill else "none"
@@ -29,11 +30,11 @@ def hatch_lines(segs,w=0.9,op=0.65):
     d="".join(f"M{a[0]:.1f} {a[1]:.1f} L{b[0]:.1f} {b[1]:.1f} " for a,b in segs)
     return f'<path d="{d}" fill="none" stroke="{INK}" stroke-width="{w}" stroke-linecap="round" opacity="{op}"/>'
 FING=[  # name, base, a0, deltas, lens, widths, seed
- ("pinky",(-40,102),16,[-10,-18],[30,22,18],[16,14,12],11),
- ("ring",(-15,115),7,[-8,-16],[40,30,23],[19,17,14],12),
- ("middle",(14,120),-2,[2,6],[46,34,25],[20,18,15],13),
- ("index",(42,112),-13,[10,18],[40,30,23],[19,17,14],14),
- ("thumb",(52,70),-70,[-6,8],[34,32,26],[24,20,16],15)]
+ ("pinky",(-40,102),40,[-18,-30],[27,20,16],[17,15,13],11),
+ ("ring",(-15,115),19,[-16,-28],[35,26,20],[20,18,15],12),
+ ("middle",(14,120),-1,[2,14],[41,30,22],[21,19,16],13),
+ ("index",(42,112),-21,[16,28],[35,26,20],[20,18,15],14),
+ ("thumb",(52,70),-78,[-14,16],[33,30,24],[25,21,17],15)]
 def finger(f):
     name,base,a0,dl,lens,wd,seed=f
     th=[a0,a0+dl[0],a0+dl[0]+dl[1]]
@@ -69,15 +70,25 @@ def finger(f):
         p=P[i];n=nrm(nodedir[i]);w=widths[i]
         a=add(p,mul(n,-w*0.36));b=add(p,mul(n,w*0.36));c=add(p,mul(nodedir[i],2))
         out.append(f'<path d="M{a[0]:.1f} {a[1]:.1f} Q{c[0]:.1f} {c[1]:.1f} {b[0]:.1f} {b[1]:.1f}" fill="none" stroke="{INK}" stroke-width="1.1" opacity="0.8"/>')
-    # nail
-    c=add(P[2],mul(dirs[2],lens[2]*0.52));rx=wd[2]*0.3;ry=lens[2]*0.3
-    ang=th[2]
-    pts=[]
-    for k in range(10):
-        a=2*math.pi*k/10;x=rx*math.cos(a);y=ry*math.sin(a)
-        rx2=x*math.cos(math.radians(-ang))-y*math.sin(math.radians(-ang));ry2=x*math.sin(math.radians(-ang))+y*math.cos(math.radians(-ang))
-        pts.append((c[0]+rx2,c[1]+ry2))
-    out.append(ink(smooth(pts,True,0.25,seed+7),1.1,PAPER2))
+    if PALM_SIDE:
+        for i in (1,2):
+            p=P[i];n=nrm(nodedir[i]);w=widths[i]
+            q=add(p,mul(nodedir[i],3.4))
+            a2=add(q,mul(n,-w*0.33));b2=add(q,mul(n,w*0.33));c2=add(q,mul(nodedir[i],1.6))
+            out.append(f'<path d="M{a2[0]:.1f} {a2[1]:.1f} Q{c2[0]:.1f} {c2[1]:.1f} {b2[0]:.1f} {b2[1]:.1f}" fill="none" stroke="{INK}" stroke-width="0.9" opacity="0.7"/>')
+        q=add(P[2],mul(dirs[2],lens[2]*0.55));n=nrm(dirs[2]);w=wd[2]
+        a3=add(q,mul(n,-w*0.3));b3=add(q,mul(n,w*0.3));c3=add(q,mul(dirs[2],2.6))
+        out.append(f'<path d="M{a3[0]:.1f} {a3[1]:.1f} Q{c3[0]:.1f} {c3[1]:.1f} {b3[0]:.1f} {b3[1]:.1f}" fill="none" stroke="{INK}" stroke-width="0.9" opacity="0.55"/>')
+    else:
+        # nail
+        c=add(P[2],mul(dirs[2],lens[2]*0.52));rx=wd[2]*0.3;ry=lens[2]*0.3
+        ang=th[2]
+        pts=[]
+        for k in range(10):
+            a=2*math.pi*k/10;x=rx*math.cos(a);y=ry*math.sin(a)
+            rx2=x*math.cos(math.radians(-ang))-y*math.sin(math.radians(-ang));ry2=x*math.sin(math.radians(-ang))+y*math.cos(math.radians(-ang))
+            pts.append((c[0]+rx2,c[1]+ry2))
+        out.append(ink(smooth(pts,True,0.25,seed+7),1.1,PAPER2))
     # knot at tip
     kt=add(tip,mul(d3,2))
     out.append(f'<circle cx="{kt[0]:.1f}" cy="{kt[1]:.1f}" r="2.6" fill="{PAPER}" stroke="{INK}" stroke-width="1.2"/>')
@@ -97,6 +108,15 @@ def palm():
     out.append(hatch_lines(segs,1.0,0.7))
     out.append(ink('M40 40 C 52 52, 58 70, 54 88 C 46 80, 40 66, 40 40 Z',1.2,None,0.7))
     out.append(hatch_lines([((44+i*1.2,48+i*3.2),(50+i*1.2,52+i*3.2)) for i in range(10)],0.9,0.6))
+    if PALM_SIDE:
+        out.append(f'<path d="M-44 92 C -22 102, 12 102, 40 90" fill="none" stroke="{INK}" stroke-width="1.5" stroke-linecap="round"/>')
+        out.append(f'<path d="M46 68 C 18 80, -12 84, -42 80" fill="none" stroke="{INK}" stroke-width="1.5" stroke-linecap="round"/>')
+        out.append(f'<path d="M50 88 C 28 76, 14 50, 14 10" fill="none" stroke="{INK}" stroke-width="1.7" stroke-linecap="round"/>')
+        out.append(f'<path d="M-38 40 C -26 52, -22 68, -26 80 M-12 26 C -4 40, -4 56, -8 70" fill="none" stroke="{INK}" stroke-width="0.9" opacity="0.55" stroke-linecap="round"/>')
+        out.append(hatch_lines([((22+i*0.4,40+i*3.6),(30+i*0.4,44+i*3.6)) for i in range(11)],0.9,0.55))
+        for kx in (-30,-4,22,44):
+            out.append(f'<ellipse cx="{kx}" cy="108" rx="9" ry="5" fill="none" stroke="{INK}" stroke-width="0.8" opacity="0.5"/>')
+        return "".join(out)
     for kx,ky,dx in [(-12,112,-8),(14,118,-2),(38,110,6)]:
         out.append(f'<path d="M{kx} {ky} C {kx+dx} {ky-34}, {kx+dx*1.5} {ky-62}, {kx+dx*2} {ky-92}" fill="none" stroke="{INK}" stroke-width="1" opacity="0.7"/>')
     return "".join(out)
@@ -111,16 +131,12 @@ def hand(rot_deg=0):
 def rotp(p,deg,origin=(0,0)):
     a=math.radians(deg);x,y=p[0]-origin[0],p[1]-origin[1]
     return (origin[0]+x*math.cos(a)-y*math.sin(a),origin[1]+x*math.sin(a)+y*math.cos(a))
-def arm():
-    # forearm from the slit (top, y=-70) to wrist (0,0); local frame with wrist at origin, pointing down
-    L=[(-40,-72),(-38,-36),(-33,-6)];R=[(40,-72),(38,-36),(33,-6)]
-    pts=[L[0],L[1],L[2],(-30,10),(0,14),(30,10),R[2],R[1],R[0]]
-    d=smooth(pts,False,0.5,9)+" "
-    outline=f"M{L[0][0]} {L[0][1]} C {L[1][0]-3} {L[1][1]}, {L[2][0]-1} {L[2][1]-14}, {L[2][0]} {L[2][1]+6} L {R[2][0]} {R[2][1]+6} C {R[2][0]+1} {R[2][1]-14}, {R[1][0]+3} {R[1][1]}, {R[0][0]} {R[0][1]} Z"
+def arm(L=250):
+    Lt=[(-40,-L),(-38,-L*0.5),(-33,-6)];Rt=[(40,-L),(38,-L*0.5),(33,-6)]
+    outline=f"M{Lt[0][0]} {Lt[0][1]} C {Lt[1][0]-3} {Lt[1][1]}, {Lt[2][0]-1} {Lt[2][1]-14}, {Lt[2][0]} {Lt[2][1]+6} L {Rt[2][0]} {Rt[2][1]+6} C {Rt[2][0]+1} {Rt[2][1]-14}, {Rt[1][0]+3} {Rt[1][1]}, {Rt[0][0]} {Rt[0][1]} Z"
     out=[ink(outline,1.9,PAPER)]
-    segs=[((-40+i*0.5,y),(-40+10+i*0.5,y+6)) for i,y in enumerate(range(-70,-6,4))]
-    out.append(hatch_lines(segs,0.9,0.55))
-    # cuff band
+    segs=[((-40+ (y+L)*0.02,y),(-40+10+(y+L)*0.02,y+6)) for y in range(-int(L)+2,-6,4)]
+    out.append(hatch_lines(segs,0.9,0.5))
     out.append(f'<path d="M-35 -22 C -12 -17, 12 -17, 35 -22 M-34 -12 C -12 -7, 12 -7, 34 -12" fill="none" stroke="{INK}" stroke-width="1.4"/>')
     out.append(hatch_lines([((-35+i*3.5,-20+ (i%2)),(-35+i*3.5+4,-13)) for i in range(0,17)],0.8,0.5))
     return "".join(out)
