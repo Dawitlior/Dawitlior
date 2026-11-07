@@ -91,7 +91,14 @@ def kt(a,b):
     return f'values="0;0;1;1;0;0" keyTimes="0;{a/T:.4f};{t1/T:.4f};{t2/T:.4f};{b/T:.4f};1" dur="{T}s" repeatCount="indefinite"'
 o=[]
 W=1180
-OFF=910
+import sys as _s0
+_s0.path.insert(0,'.')
+import handsketch as _hs0
+_HB,_HT=_hs0.hand()
+WRX,WRY,ROT=684.0,379.0,-38.0
+_tips=[_hs0.rotp(t,ROT) for n,t in _HT]
+_maxy=max(t[1] for t in _tips)+WRY
+OFF=int(_maxy+118+92)
 H=OFF+640
 o.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="100%" role="img" aria-label="Lior Dawit — Systems and Automation Builder. A hand conducting a live system map connecting exchange APIs, Make, Claude agents, Supabase, Stripe, Google Workspace, Discord, Telegram, X, Netlify, VPS and GitHub Actions.">')
 o.append('''<style>
@@ -104,7 +111,7 @@ o.append('''<defs>
 <linearGradient id="gb" x1="0" x2="1"><stop offset="0" stop-color="#0891b2"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
 <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.14"/></filter>
 <filter id="gl" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="2.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<radialGradient id="orbc"><stop offset="0" stop-color="#06b6d4" stop-opacity="0.55"/><stop offset="1" stop-color="#06b6d4" stop-opacity="0"/></radialGradient><radialGradient id="orbv"><stop offset="0" stop-color="#8b5cf6" stop-opacity="0.5"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient><radialGradient id="slit" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#050a14" stop-opacity="0.95"/><stop offset="1" stop-color="#050a14" stop-opacity="0"/></radialGradient><clipPath id="bclip"><rect x="0" y="0" width="1000" height="340" rx="20"/></clipPath><pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" class="gd" stroke-width="1"/></pattern>
+<radialGradient id="orbc"><stop offset="0" stop-color="#06b6d4" stop-opacity="0.55"/><stop offset="1" stop-color="#06b6d4" stop-opacity="0"/></radialGradient><radialGradient id="orbv"><stop offset="0" stop-color="#8b5cf6" stop-opacity="0.5"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient><radialGradient id="slit" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#050a14" stop-opacity="0.95"/><stop offset="1" stop-color="#050a14" stop-opacity="0"/></radialGradient><clipPath id="bclip"><rect x="0" y="0" width="1000" height="290" rx="20"/></clipPath><pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" class="gd" stroke-width="1"/></pattern>
 </defs>''')
 o.append(f'<rect width="{W}" height="{H}" fill="url(#grid)"/>')
 BANNER_INNER=open('/Users/liordawit/Documents/My agent/job-hunt/github-profile/assets/banner.svg',encoding='utf-8').read()
@@ -114,7 +121,7 @@ import re as _rx
 _parts=BANNER_INNER.split('<line ')
 BANNER_INNER=_parts[0]+''.join(('<line '+p) for i,p in enumerate(_parts[1:]) if i%3==0)
 BANNER_INNER=_rx.sub(r'\s*\n\s*','',BANNER_INNER)
-o.append('<rect x="52" y="10" width="1074" height="365" rx="22" class="nf" fill-opacity="0.55" stroke="url(#gb)" stroke-opacity="0.5" stroke-width="1.6"/>')
+o.append('<rect x="52" y="10" width="1074" height="312" rx="22" class="nf" fill-opacity="0.55" stroke="url(#gb)" stroke-opacity="0.5" stroke-width="1.6"/>')
 o.append('<g transform="translate(52,10) scale(1.074)" clip-path="url(#bclip)">'+BANNER_INNER+'</g>')
 o.append('<g transform="translate(38,'+str(OFF)+')">')
 # lanes
@@ -251,10 +258,10 @@ sys.path.insert(0,'.')
 import handsketch as hs
 HBODY,HTIPS=hs.hand()
 ARM=hs.arm()
-WRX,WRY,ROT=685.0,445.0,12.0
+pass
 o.append('<g id="hand-layer">')
 # slit the arm comes out of
-o.append('<ellipse cx="700" cy="376" rx="64" ry="11" fill="url(#slit)"/><path d="M640 376 C 670 369, 730 369, 760 376" fill="none" stroke="var(--txt)" stroke-width="1.4" opacity="0.55"/>')
+o.append('<ellipse cx="640" cy="323" rx="64" ry="11" fill="url(#slit)"/><path d="M580 323 C 610 316, 670 316, 700 323" fill="none" stroke="var(--txt)" stroke-width="1.4" opacity="0.55"/>')
 # strings (behind the hand), from the tied fingertips to the process cards
 cols=["#db2777","#7c3aed","#0891b2","#7c3aed","#db2777"]
 durs=[3.6,3.0,2.6,3.2,3.8]
