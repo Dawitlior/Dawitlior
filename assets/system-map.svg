@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 880" width="100%" role="img" aria-label="Lior Dawit — Systems and Automation Builder. A live system map connecting exchange APIs, Make, n8n, Claude agents, Supabase, Stripe, Google Workspace, Discord, Telegram, X, Netlify, VPS and GitHub Actions.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 880" width="100%" role="img" aria-label="Lior Dawit — Systems and Automation Builder. A live system map connecting exchange APIs, Make, Claude agents, Supabase, Stripe, Google Workspace, Discord, Telegram, X, Netlify, VPS and GitHub Actions.">
 <style>
 svg{--node:#ffffff;--node2:#f8fafc;--txt:#0f172a;--sub:#64748b;--lane:rgba(15,23,42,0.035);--lane-s:rgba(15,23,42,0.08);--grid:rgba(15,23,42,0.05);--shadow:rgba(15,23,42,0.14)}
 @media (prefers-color-scheme: dark){svg{--node:#0f172a;--node2:#111c33;--txt:#f1f5f9;--sub:#94a3b8;--lane:rgba(148,163,184,0.06);--lane-s:rgba(148,163,184,0.14);--grid:rgba(148,163,184,0.07);--shadow:rgba(0,0,0,0.5)}}
