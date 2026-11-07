@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 720" width="100%" role="img" aria-label="How the technologies connect: exchange APIs, Make, n8n, Claude agents, Supabase, Stripe, Google Sheets, Discord and Telegram, Netlify, VPS and GitHub Actions">
+<defs>
+<linearGradient id="gb" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+<pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#1e293b" stroke-width="1"/></pattern>
+<filter id="gl" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="30"/></filter>
+</defs>
+<rect x="1" y="1" width="998" height="718" rx="18" fill="#070b14" stroke="url(#gb)" stroke-opacity="0.55" stroke-width="2"/><rect x="2" y="2" width="996" height="716" rx="17" fill="url(#grid)" opacity="0.55"/>
+<circle cx="640" cy="260" r="150" fill="#8b5cf6" opacity="0.18" filter="url(#soft)"><animate attributeName="cx" values="640;560;640" dur="10s" repeatCount="indefinite"/></circle><circle cx="250" cy="300" r="140" fill="#06b6d4" opacity="0.14" filter="url(#soft)"><animate attributeName="cx" values="250;340;250" dur="12s" repeatCount="indefinite"/></circle>
+<text x="32" y="44" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="30" font-weight="300" fill="#cbd5e1">Lior <tspan font-weight="800" fill="url(#gb)">Dawit</tspan></text>
+<text x="34" y="68" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#94a3b8">Systems &amp; Automation Builder — how the technologies connect</text>
+<g transform="translate(0,88)">
+<g fill="none" stroke-width="1.6">
+<path id="e1" d="M200 102 C 360 102, 430 112, 515 118" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="5.0s" repeatCount="indefinite"/></path>
+<path id="e2" d="M200 192 C 235 192, 240 172, 270 172" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.0s" repeatCount="indefinite"/></path>
+<path id="e3" d="M445 172 C 480 172, 490 160, 515 160" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.0s" repeatCount="indefinite"/></path>
+<path id="e4" d="M200 282 C 330 330, 430 252, 515 250" stroke="#a78bfa" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="5.5s" repeatCount="indefinite"/></path>
+<path id="e5" d="M445 92 C 480 92, 490 100, 515 100" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.0s" repeatCount="indefinite"/></path>
+<path id="e6" d="M357 204 L357 220" stroke="#fbbf24" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="2.6s" repeatCount="indefinite"/></path>
+<path id="e6b" d="M357 284 L357 300" stroke="#fbbf24" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="2.6s" repeatCount="indefinite"/></path>
+<path id="e7" d="M445 328 C 600 410, 700 270, 775 250" stroke="#fbbf24" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="6.0s" repeatCount="indefinite"/></path>
+<path id="e9" d="M705 100 C 740 100, 745 92, 775 92" stroke="#34d399" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="3.6s" repeatCount="indefinite"/></path>
+<path id="e10" d="M705 160 C 740 160, 745 172, 775 172" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.0s" repeatCount="indefinite"/></path>
+<path id="e11" d="M705 230 C 740 230, 745 252, 775 252" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.0s" repeatCount="indefinite"/></path>
+<path id="e12" d="M705 275 C 740 275, 745 332, 775 332" stroke="#a78bfa" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.4s" repeatCount="indefinite"/></path>
+<path id="e13" d="M870 500 L870 364" stroke="#94a3b8" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="3.6s" repeatCount="indefinite"/></path>
+<path id="e14" d="M775 532 L705 532" stroke="#94a3b8" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="2.8s" repeatCount="indefinite"/></path>
+<path id="e18" d="M515 532 L460 532" stroke="#94a3b8" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="2.8s" repeatCount="indefinite"/></path>
+<path id="e0" d="M200 28 C 235 28, 240 92, 270 92" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.0s" repeatCount="indefinite"/></path>
+<path id="e15" d="M610 500 L610 300" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.6s" repeatCount="indefinite"/></path>
+<path id="e16" d="M445 412 C 480 412, 490 290, 515 280" stroke="#22d3ee" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="4.6s" repeatCount="indefinite"/></path>
+<path id="e17" d="M530 300 C 500 440, 480 470, 440 500" stroke="#94a3b8" stroke-opacity="0.38"><animate attributeName="stroke-opacity" values="0.22;0.55;0.22" dur="5.2s" repeatCount="indefinite"/></path>
+</g>
+<g>
+<rect x="515" y="60" width="190" height="250" rx="16" fill="#0b1220" stroke="url(#gb)" stroke-width="2.4"><animate attributeName="stroke-opacity" values="1;0.5;1" dur="3.5s" repeatCount="indefinite"/></rect>
+<rect x="515" y="60" width="190" height="250" rx="16" fill="url(#gb)" opacity="0.07"/>
+<text x="610" y="92" text-anchor="middle" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="800" fill="#f1f5f9">Supabase</text>
+<text x="610" y="110" text-anchor="middle" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">the core backend</text>
+<rect x="533" y="124" width="154" height="26" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.8"/><circle cx="548" cy="137" r="3.2" fill="#22d3ee"><animate attributeName="opacity" values="1;0.3;1" dur="2.0s" repeatCount="indefinite"/></circle><text x="560" y="141.5" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#e2e8f0">PostgreSQL</text>
+<rect x="533" y="158" width="154" height="26" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-opacity="0.8"/><circle cx="548" cy="171" r="3.2" fill="#a78bfa"><animate attributeName="opacity" values="1;0.3;1" dur="2.4s" repeatCount="indefinite"/></circle><text x="560" y="175.5" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#e2e8f0">Row-level security</text>
+<rect x="533" y="192" width="154" height="26" rx="8" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.8"/><circle cx="548" cy="205" r="3.2" fill="#22d3ee"><animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/></circle><text x="560" y="209.5" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#e2e8f0">Edge Functions</text>
+<rect x="533" y="226" width="154" height="26" rx="8" fill="#0f172a" stroke="#34d399" stroke-opacity="0.8"/><circle cx="548" cy="239" r="3.2" fill="#34d399"><animate attributeName="opacity" values="1;0.3;1" dur="3.2s" repeatCount="indefinite"/></circle><text x="560" y="243.5" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#e2e8f0">Scheduled jobs</text>
+<rect x="533" y="260" width="154" height="26" rx="8" fill="#0f172a" stroke="#a78bfa" stroke-opacity="0.8"/><circle cx="548" cy="273" r="3.2" fill="#a78bfa"><animate attributeName="opacity" values="1;0.3;1" dur="3.6s" repeatCount="indefinite"/></circle><text x="560" y="277.5" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#e2e8f0">Audit-log triggers</text>
+</g>
+<g>
+<rect x="30" y="0" width="170" height="56" rx="12" fill="#0f172a" stroke="#94a3b8" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="2s" repeatCount="indefinite"/></rect>
+<rect x="30" y="12" width="3.5" height="32" rx="1.7" fill="#94a3b8"/>
+<text x="46" y="26" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Triggers</text>
+<text x="46" y="45" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">webhooks · schedules · events</text>
+</g>
+<g>
+<rect x="30" y="70" width="170" height="64" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="0s" repeatCount="indefinite"/></rect>
+<rect x="30" y="82" width="3.5" height="40" rx="1.7" fill="#22d3ee"/>
+<text x="46" y="96" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Exchange APIs</text>
+<text x="46" y="115" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">REST · HMAC auth</text>
+</g>
+<g>
+<rect x="30" y="160" width="170" height="64" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="2s" repeatCount="indefinite"/></rect>
+<rect x="30" y="172" width="3.5" height="40" rx="1.7" fill="#22d3ee"/>
+<text x="46" y="186" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Market &amp; macro data</text>
+<text x="46" y="205" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">feeds · on-chain · research</text>
+</g>
+<g>
+<rect x="30" y="250" width="170" height="64" rx="12" fill="#0f172a" stroke="#a78bfa" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="0s" repeatCount="indefinite"/></rect>
+<rect x="30" y="262" width="3.5" height="40" rx="1.7" fill="#a78bfa"/>
+<text x="46" y="276" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Users</text>
+<text x="46" y="295" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">web app · 7 languages · RTL</text>
+</g>
+<g>
+<rect x="270" y="60" width="175" height="64" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="2s" repeatCount="indefinite"/></rect>
+<rect x="270" y="72" width="3.5" height="40" rx="1.7" fill="#22d3ee"/>
+<text x="286" y="86" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Make</text>
+<text x="286" y="105" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">scenarios · webhooks · OAuth</text>
+</g>
+<g>
+<rect x="270" y="140" width="175" height="64" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="2s" repeatCount="indefinite"/></rect>
+<rect x="270" y="152" width="3.5" height="40" rx="1.7" fill="#22d3ee"/>
+<text x="286" y="166" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">n8n</text>
+<text x="286" y="185" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">workflows · APIs</text>
+</g>
+<g>
+<rect x="270" y="220" width="175" height="64" rx="12" fill="#0f172a" stroke="#fbbf24" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="2s" repeatCount="indefinite"/></rect>
+<rect x="270" y="232" width="3.5" height="40" rx="1.7" fill="#fbbf24"/>
+<text x="286" y="246" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Claude agents</text>
+<text x="286" y="265" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">LLM · prompts · multi-agent</text>
+</g>
+<g>
+<rect x="270" y="300" width="175" height="56" rx="12" fill="#0f172a" stroke="#fbbf24" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="2s" repeatCount="indefinite"/></rect>
+<rect x="270" y="312" width="3.5" height="32" rx="1.7" fill="#fbbf24"/>
+<text x="286" y="326" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Human approval</text>
+<text x="286" y="345" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">Telegram gate</text>
+</g>
+<g>
+<rect x="270" y="380" width="175" height="64" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="2s" repeatCount="indefinite"/></rect>
+<rect x="270" y="392" width="3.5" height="40" rx="1.7" fill="#22d3ee"/>
+<text x="286" y="406" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Quant engine</text>
+<text x="286" y="425" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">backtests · risk scoring</text>
+</g>
+<g>
+<rect x="775" y="60" width="190" height="64" rx="12" fill="#0f172a" stroke="#34d399" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="3s" repeatCount="indefinite"/></rect>
+<rect x="775" y="72" width="3.5" height="40" rx="1.7" fill="#34d399"/>
+<text x="791" y="86" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Stripe</text>
+<text x="791" y="105" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">subscriptions · webhooks</text>
+</g>
+<g>
+<rect x="775" y="140" width="190" height="64" rx="12" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="3s" repeatCount="indefinite"/></rect>
+<rect x="775" y="152" width="3.5" height="40" rx="1.7" fill="#22d3ee"/>
+<text x="791" y="166" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Google Workspace</text>
+<text x="791" y="185" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">Sheets API · automated delivery</text>
+</g>
+<g>
+<rect x="775" y="220" width="190" height="64" rx="12" fill="#0f172a" stroke="#fbbf24" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="3s" repeatCount="indefinite"/></rect>
+<rect x="775" y="232" width="3.5" height="40" rx="1.7" fill="#fbbf24"/>
+<text x="791" y="246" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Discord · Telegram</text>
+<text x="791" y="265" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">bots · community</text>
+</g>
+<g>
+<rect x="775" y="300" width="190" height="64" rx="12" fill="#0f172a" stroke="#94a3b8" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="3s" repeatCount="indefinite"/></rect>
+<rect x="775" y="312" width="3.5" height="40" rx="1.7" fill="#94a3b8"/>
+<text x="791" y="326" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Netlify · CDN</text>
+<text x="791" y="345" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">edge cache · signed URLs</text>
+</g>
+<g>
+<rect x="270" y="500" width="190" height="64" rx="12" fill="#0f172a" stroke="#94a3b8" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="2s" repeatCount="indefinite"/></rect>
+<rect x="270" y="512" width="3.5" height="40" rx="1.7" fill="#94a3b8"/>
+<text x="286" y="526" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Monitoring</text>
+<text x="286" y="545" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">error tracking · backups</text>
+</g>
+<g>
+<rect x="515" y="500" width="190" height="64" rx="12" fill="#0f172a" stroke="#94a3b8" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="3s" repeatCount="indefinite"/></rect>
+<rect x="515" y="512" width="3.5" height="40" rx="1.7" fill="#94a3b8"/>
+<text x="531" y="526" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">VPS</text>
+<text x="531" y="545" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">24/7 workers · schedulers</text>
+</g>
+<g>
+<rect x="775" y="500" width="190" height="64" rx="12" fill="#0f172a" stroke="#94a3b8" stroke-opacity="0.75" stroke-width="1.5"><animate attributeName="stroke-opacity" values="0.9;0.35;0.9" dur="6s" begin="3s" repeatCount="indefinite"/></rect>
+<rect x="775" y="512" width="3.5" height="40" rx="1.7" fill="#94a3b8"/>
+<text x="791" y="526" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">GitHub Actions</text>
+<text x="791" y="545" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#94a3b8">CI/CD · tests · secret scans</text>
+</g>
+<g filter="url(#gl)">
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="4.0s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.0s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="4.0s" repeatCount="indefinite" begin="1.33s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.0s" begin="1.33s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="4.0s" repeatCount="indefinite" begin="2.67s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e1"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.0s" begin="2.67s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="1.50s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e2"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="1.50s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e3"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="1.50s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e3"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="1.50s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#a78bfa"><animateMotion dur="4.5s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e4"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.5s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#a78bfa"><animateMotion dur="4.5s" repeatCount="indefinite" begin="1.50s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e4"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.5s" begin="1.50s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#a78bfa"><animateMotion dur="4.5s" repeatCount="indefinite" begin="3.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e4"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.5s" begin="3.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e5"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="1.50s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e5"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="1.50s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#fbbf24"><animateMotion dur="1.6s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e6"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="1.6s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#fbbf24"><animateMotion dur="1.6s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e6b"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="1.6s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#fbbf24"><animateMotion dur="5.0s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e7"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5.0s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#fbbf24"><animateMotion dur="5.0s" repeatCount="indefinite" begin="1.67s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e7"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5.0s" begin="1.67s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#fbbf24"><animateMotion dur="5.0s" repeatCount="indefinite" begin="3.33s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e7"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5.0s" begin="3.33s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#34d399"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e9"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.6s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#34d399"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.87s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e9"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.6s" begin="0.87s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#34d399"><animateMotion dur="2.6s" repeatCount="indefinite" begin="1.73s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e9"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.6s" begin="1.73s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e10"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="1.50s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e10"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="1.50s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e11"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="1.50s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e11"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="1.50s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#a78bfa"><animateMotion dur="3.4s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e12"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.4s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#a78bfa"><animateMotion dur="3.4s" repeatCount="indefinite" begin="1.70s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e12"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.4s" begin="1.70s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e13"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.6s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.87s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e13"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.6s" begin="0.87s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="2.6s" repeatCount="indefinite" begin="1.73s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e13"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="2.6s" begin="1.73s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="1.8s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e14"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="1.8s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="1.8s" repeatCount="indefinite" begin="0.90s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e14"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="1.8s" begin="0.90s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="1.8s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e18"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="1.8s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="1.8s" repeatCount="indefinite" begin="0.90s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e18"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="1.8s" begin="0.90s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.0s" repeatCount="indefinite" begin="1.50s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e0"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.0s" begin="1.50s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.6s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e15"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.6s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.6s" repeatCount="indefinite" begin="1.20s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e15"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.6s" begin="1.20s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.6s" repeatCount="indefinite" begin="2.40s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e15"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.6s" begin="2.40s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.6s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e16"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.6s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.6s" repeatCount="indefinite" begin="1.20s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e16"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.6s" begin="1.20s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#22d3ee"><animateMotion dur="3.6s" repeatCount="indefinite" begin="2.40s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e16"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3.6s" begin="2.40s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="4.2s" repeatCount="indefinite" begin="0.00s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e17"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.2s" begin="0.00s" repeatCount="indefinite"/></circle>
+<circle r="3.8" fill="#94a3b8"><animateMotion dur="4.2s" repeatCount="indefinite" begin="2.10s" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#e17"/></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="4.2s" begin="2.10s" repeatCount="indefinite"/></circle>
+</g>
+<circle cx="34" cy="598" r="4.5" fill="#22d3ee" filter="url(#gl)"/><text x="46" y="602" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#94a3b8">data / sync</text>
+<circle cx="155" cy="598" r="4.5" fill="#a78bfa" filter="url(#gl)"/><text x="167" y="602" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#94a3b8">auth &amp; access</text>
+<circle cx="318" cy="598" r="4.5" fill="#fbbf24" filter="url(#gl)"/><text x="330" y="602" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#94a3b8">approval gate</text>
+<circle cx="453" cy="598" r="4.5" fill="#34d399" filter="url(#gl)"/><text x="465" y="602" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#94a3b8">payments</text>
+<circle cx="553" cy="598" r="4.5" fill="#94a3b8" filter="url(#gl)"/><text x="565" y="602" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#94a3b8">deploy &amp; ops</text>
+</g></svg>

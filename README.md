@@ -1,6 +1,4 @@
-<img src="./assets/hero.gif" alt="Lior Dawit — Systems & Automation Builder. A cloud of scattered data organizes itself into a reliable pipeline." width="100%">
-
-**Systems & Automation Builder** — API integrations, data pipelines and AI agents in production.
+<img src="./assets/system-map.svg" alt="Lior Dawit — Systems & Automation Builder. A live system map: exchange APIs, Make, n8n, Claude agents, Supabase, Stripe, Google Workspace, Discord and Telegram, Netlify, VPS, GitHub Actions and monitoring, connected by animated data flows." width="100%">
 
 ## Toolbox
 
@@ -13,12 +11,6 @@
 | **Infrastructure** | GitHub Actions (CI/CD) · Netlify · CDN · VPS hosting · Error monitoring |
 | **Quantitative** | Backtesting · Risk scoring · Data pipelines |
 
-## Where it runs
-
-Most of the code is in private repositories.
-
-- **Access control in the database** — PostgreSQL row-level security, triggers for an immutable audit log, signed URLs, CDN, Netlify
-- **Exchange integrations** · [orcainvestment.co.il](https://orcainvestment.co.il) — REST APIs, HMAC, Supabase Edge Functions, Stripe, Make, Claude API
-- **Data pipelines & backtesting** — scheduled pipelines, risk scoring, Google Sheets API, Discord · [write-up](https://dossierquant.netlify.app/)
+Most of the code is in private repositories. Live: [orcainvestment.co.il](https://orcainvestment.co.il) · [technical write-up](https://dossierquant.netlify.app/)
 
 dawitlior777@gmail.com
